@@ -3,7 +3,7 @@
   Param
   (
     [Parameter(ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Position = 0)]
-    [ValidateNotNullOrEmpty()]
+    [ValidatePattern('^[0-9*]{1,5}$')]
     $Postcode = '*',
     
     [Parameter(Position = 1)]
