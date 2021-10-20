@@ -16,7 +16,7 @@
     [string[]]
     $Remove,
     
-    [ValidateSet('LowerToUpperCase', 'UpperToLowerCase', 'DashToHyphen')]
+    [ValidateSet('LowerToUpperCase', 'UpperToLowerCase', 'DashToHyphen', 'SmartQuotes')]
     [string[]]
     $Replace
   )
@@ -96,6 +96,12 @@
       If ('UpperToLowerCase' -in $Replace)
       {
         $String = $String.ToLower()
+      }
+      
+      If ('SmartQuotes' -in $Replace)
+      {
+        $String = $String -creplace '[\u2019\u2018]', ''''
+        $String = $String -creplace '[\u201C\u201D]', '"'
       }
     }
     
