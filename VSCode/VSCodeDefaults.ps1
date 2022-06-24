@@ -1,3 +1,17 @@
+<#
+  .SYNOPSIS
+  My personal list of extensions and preferences to apply to VS Code
+  
+  .DESCRIPTION
+  My personal list of extensions and preferences to apply to Visual Studio Code
+  The focus lies on use with PowerShell
+  
+  .NOTES
+  Create by Jarno Colombeen
+  
+  .EXAMPLE
+  Execute this entire script in PowerShell to install the extensions and apply the settings
+#>
 #region DEFAULTS
 $DefaultExtensions = @(
   # Powershell
